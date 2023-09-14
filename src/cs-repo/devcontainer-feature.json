@@ -1,0 +1,20 @@
+{
+  "name": "Local CS Debian Repository",
+  "id": "cs-repo",
+  "version": "1.0.1",
+  "description": "Configure local debian repository",
+  "options": {
+    "uris": {
+      "type": "string",
+      "description": "Choose main repo server."
+    },
+    "suites": {
+      "type": "string",
+      "default": "stable testing unstable experimental",
+      "description": "Choose suites for activation."
+    }
+  },
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils"
+  ]
+}

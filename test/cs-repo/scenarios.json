@@ -1,0 +1,11 @@
+{
+    "test": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "cs-repo": {
+                "uris": "https://hubi.com/hello",
+                "suites": "stable"
+            }
+        }
+    }
+}

@@ -6,6 +6,7 @@
   "options": {
     "uris": {
       "type": "string",
+      "default": "http://archive.ubuntu.com/ubuntu"
       "description": "Choose main repo server."
     },
     "suites": {

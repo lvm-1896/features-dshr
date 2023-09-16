@@ -1,0 +1,16 @@
+{
+  "name": "Local CS Debian Packages",
+  "id": "packages",
+  "version": "1.0.1",
+  "description": "Install Local Debian Packages",
+  "options": {
+    "debs": {
+      "type": "string",
+      "default": "-f",
+      "description": "Choose packages."
+    }
+  },
+  "installsAfter": [
+    "ghcr.io/lvm-1896/features-dshr/cs-repo"
+  ]
+}

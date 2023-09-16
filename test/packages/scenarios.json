@@ -1,0 +1,15 @@
+{
+    "test": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "cs-repo": {
+                "uris": "http://de.archive.ubuntu.com/ubuntu",
+                "suites": "jammy",
+                "components": "restricted"
+            },
+            "packages": {
+                "debs": "file"
+            }
+        }
+    }
+}

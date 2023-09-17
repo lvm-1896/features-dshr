@@ -1,7 +1,7 @@
 {
   "name": "Local CS Debian Repository",
   "id": "cs-repo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Configure local debian repository",
   "options": {
     "uris": {

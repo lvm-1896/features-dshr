@@ -1,7 +1,7 @@
 {
   "name": "Local CS Debian Packages",
   "id": "packages",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Install Local Debian Packages",
   "options": {
     "debs": {

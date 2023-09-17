@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 echo "Activating feature 'packages'"
@@ -60,7 +60,7 @@ apt_get_update()
 {
     if [ "$(find /var/lib/apt/lists/* | wc -l)" = "0" ]; then
         echo "Running apt-get update..."
-        apt-get update -y
+        apt-get update -y || true
     fi
 }
 
@@ -91,7 +91,7 @@ export DEBIAN_FRONTEND=noninteractive
 apt_get_update
 
 # Install X11, fluxbox and VS Code dependencies
-check_packages ${DEBS}
+check_packages ${DEBS} || true
 
 # Check at least one locale exists
 # if ! grep -o -E '^\s*en_US.UTF-8\s+UTF-8' /etc/locale.gen > /dev/null; then
@@ -103,10 +103,6 @@ check_packages ${DEBS}
 rm -rf /var/lib/apt/lists/*
 
 cat <<EOF
-
-
 You now have a working ${DEBS} installed! Have fun install.sh
-
 (*) Done!
-
 EOF

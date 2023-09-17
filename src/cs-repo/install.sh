@@ -18,7 +18,8 @@ echo "The effective dev container remoteUser's home directory is '$_REMOTE_USER_
 echo "The effective dev container containerUser is '$_CONTAINER_USER'"
 echo "The effective dev container containerUser's home directory is '$_CONTAINER_USER_HOME'"
 
-cat >>/etc/ssl/certs/ca-certificates.crt <<EOF
+[ -d /etc/ssl/certs ] || mkdir -p /etc/ssl/certs 
+cat >/etc/ssl/certs/ca-certificates.crt.add <<EOF
 -----BEGIN CERTIFICATE-----
 MIIDjDCCAnSgAwIBAgIBATANBgkqhkiG9w0BAQUFADAxMRQwEgYDVQQDEwtMVk0g
 Um9vdCBDQTELMAkGA1UEBhMCREUxDDAKBgNVBAoTA0xWTTAeFw0wNzA4MjIwOTA4
